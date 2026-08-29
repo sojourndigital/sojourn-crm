@@ -1,0 +1,18 @@
+# Credentials, from the first commit - not added later, because "later" is how one gets committed.
+.env
+.env.*
+!.env.example
+secrets/
+*.pem
+*.key
+id_rsa*
+
+# A .gitignore stops git and NOTHING else. It does not stop OneDrive or SharePoint sync. This repo
+# lives in C:\Users\sojou\dev\ because that path is local; if it ever moves under
+# "C:\Users\sojou\Sojourn Digital\..." every file below is published to whoever shares that library.
+
+node_modules/
+vendor/
+__pycache__/
+*.log
+.DS_Store

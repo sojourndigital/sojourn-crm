@@ -29,8 +29,4 @@ RUN cd backend && npm install --ignore-scripts && npm run build
 EXPOSE 8080
 
 # Run startup commands directly
-CMD cd /app/backend && \
-    php artisan key:generate --force && \
-    php artisan migrate --force && \
-    php artisan config:clear && \
-    php artisan serve --host=0.0.0.0 --port=8080
+CMD ["/bin/bash", "-c", "cd /app/backend && php artisan key:generate --force && php artisan migrate --force && php artisan config:clear && php artisan serve --host=0.0.0.0 --port=8080"]
